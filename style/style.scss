@@ -1,0 +1,63 @@
+@import "./reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3F6FF;
+  height: 100vh;
+}
+
+.wrap {
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  font-size: 10px;
+
+
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(5, .7fr) 1fr repeat(5, .7fr);
+
+    div {
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+  }
+
+  .under-menu {
+    border: 1px solid black;
+    display: grid;
+    grid-column: span -1;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+  }
+
+  // .img {
+  //   display: grid;
+  //   grid-column: span 5;
+  //   grid-row: span 2;
+
+  // }
+}
