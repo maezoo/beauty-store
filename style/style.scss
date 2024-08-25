@@ -11,32 +11,33 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: 'NIXGONM-Vb';
   background-color: #F3F6FF;
   height: 100vh;
-  max-height: 600px;
+  max-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .wrap {
+  max-width: 1200px;
   background-color: #fff;
   width: 90%;
   height: 90%;
-
   font-size: 14px;
-  // font-weight: 600;
   border: 1px solid black;
   display: grid;
   grid-template-rows: 1fr .6fr 10fr;
 
   .menu {
     display: grid;
-    grid-template-columns: .6fr repeat(4, .8fr) 1.2fr repeat(4, .8fr) .6fr;
-    // align-items: center;
-    // justify-items: center;
+    grid-template-columns: .6fr repeat(4, .8fr) 1.2fr repeat(3, .8fr) .6fr .6fr;
 
     div {
       display: flex;
@@ -48,118 +49,119 @@ body {
       }
     }
 
-    .grid-column11 {
-      display: grid;
-      grid-template-columns: repeat(5, .8fr) 1fr repeat(5, .8fr);
-      align-items: center;
-      font-size: 11px;
+    .menu-icon {
+      width: 20px;
+      height: 20px;
     }
 
-    .hamburger {
-      display: flex;
-      justify-content: center;
-
-      img {
-        width: 20px;
-        height: 20px;
-      }
-    }
 
     .logo {
       font-size: 25px;
-
     }
+  }
+}
 
-    .bag {
-      img {
-        width: 20px;
-        height: 20px;
-      }
+.under-menu {
+  display: grid;
+  border-top: 1px solid black;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 28px;
+    gap: 10px;
+
+    li:nth-child(5) {
+      color: #999999;
     }
+  }
+}
+
+.grid-column11 {
+  // grid-template-columns: repeat(5, .8fr) 1fr repeat(5, .8fr);
+  align-items: center;
+  font-size: 11px;
+}
+
+main {
+  font-size: 15px;
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-rows: 1fr .8fr;
+  grid-template-columns: 1fr .8fr .8fr;
+
+  .left-image-box {
+    grid-row: span 3;
+    background: url(../images/hand-soap.jpg) no-repeat;
+    width: 500px;
+    height: 617px;
+    background-position: 95% 40%;
+    border-right: 1px solid black;
 
   }
 
-  .under-menu {
-    display: grid;
-    border-top: 1px solid black;
 
+  .right-deal {
+    border-bottom: 1px solid black;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    padding: 60px;
+    gap: 18px;
 
+    background: url(../images/salmon.svg) no-repeat;
 
-    p {
-      color: #fff;
+    // width: 130px;
+    // height: 130px;
+    background-position: 70%;
 
+    h1 {
+      font-size: 60px;
     }
 
     ul {
       display: flex;
-      flex-direction: row;
       align-items: center;
-      padding-left: 28px;
-      gap: 10px;
+      gap: 60px;
+      font-size: 20px;
 
+      li:nth-child(3) {
+        color: #fff;
 
-      li:nth-child(5) {
-        color: #999999;
-      }
-    }
-  }
-
-  main {
-    border: 1px solid black;
-    display: grid;
-    grid-template-rows: 3fr 2fr;
-    grid-template-columns: repeat(5, 1fr) 1.5fr repeat(5, 1fr);
-
-    .left-image-box {
-      grid-row: span 2;
-      grid-column: span 5;
-      background-color: red;
-
-      img {
-
-        // width: 600px;
-        // height: 700px;
-        // object-fit: contain;
-      }
-    }
-
-    .right-deal {
-      border: 1px solid black;
-      grid-column: span 6;
-      display: flex;
-      flex-direction: column;
-      // align-items: center;
-      justify-content: center;
-      font-weight: 700;
-
-
-
-      h1 {
-        font-weight: 600;
-        font-size: 35px;
-      }
-
-      ul {
         display: flex;
-        font-size: 24px;
-        gap: 20px;
-
-        li:nth-child(3) {
-          font-size: 15px;
-          color: #fff;
-          background-color: tomato;
-        }
+        align-items: center;
+        justify-content: center;
       }
-    }
-
-    .right-left {
-      background-color: rgb(47, 41, 155);
-    }
-
-    .right-right {
-      grid-column: span 3;
-      background-color: yellow;
     }
   }
 
+  .right-left {
+    padding: 30px;
+    border-right: 1px solid black;
+  }
+
+  .right-right {
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+
+    li:nth-child(even) {
+      border-bottom: solid 1px rgb(61, 23, 23);
+    }
+
+    p {
+      border-bottom: solid 1px black;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
