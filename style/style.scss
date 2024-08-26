@@ -85,7 +85,7 @@ body {
 }
 
 main {
-  font-size: 15px;
+  font-size: 16px;
   border-top: 1px solid black;
   display: grid;
   grid-template-rows: 1fr .8fr;
@@ -103,37 +103,51 @@ main {
 
 
   .right-deal {
+    font-weight: 700;
     border-bottom: 1px solid black;
     grid-column: span 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: 700;
-    padding: 60px;
-    gap: 18px;
+    padding: 60px 80px 0 60px;
+    // gap: 10px;
 
     background: url(../images/salmon.svg) no-repeat;
+    background-size: 87px;
+    background-position: 91.7% 85.6%;
 
-    // width: 130px;
-    // height: 130px;
-    background-position: 70%;
+
+    >p {
+      padding-bottom: 8px;
+    }
 
     h1 {
       font-size: 60px;
     }
 
+
     ul {
       display: flex;
+      justify-content: right;
       align-items: center;
-      gap: 60px;
-      font-size: 20px;
+      gap: 50px;
+      padding-top: 35px;
+
+      li {
+        font-size: 15px;
+        // font-weight: bold;
+
+      }
 
       li:nth-child(3) {
         color: #fff;
-
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        gap: 1px;
+        padding-left: 10px;
+        font-size: 14px;
+
       }
     }
   }
@@ -144,19 +158,20 @@ main {
   }
 
   .right-right {
-
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 3px;
 
-
-    li:nth-child(even) {
-      border-bottom: solid 1px rgb(61, 23, 23);
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
     }
 
-    p {
-      border-bottom: solid 1px black;
+    .line {
+      border-top: solid 1px black;
+      padding-bottom: 15px;
     }
 
     img {
