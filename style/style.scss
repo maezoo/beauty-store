@@ -93,7 +93,7 @@ main {
 
   .left-image-box {
     grid-row: span 3;
-    background: url(../images/hand-soap.jpg) no-repeat;
+    background: url(/images/hand-soap.jpg) no-repeat;
     width: 500px;
     height: 617px;
     background-position: 95% 40%;
@@ -112,7 +112,7 @@ main {
     padding: 60px 80px 0 60px;
     // gap: 10px;
 
-    background: url(../images/salmon.svg) no-repeat;
+    background: url(/images/salmon.svg) no-repeat;
     background-size: 87px;
     background-position: 91.7% 85.6%;
 
